@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Application Date</title>
+</head>
+<body>
+<!-- DATE APPLICATION -->
+<div ng-app='ApplicationDate'>
+<!-- DATE CONTROLLER -->
+<div ng-controller='DateCtrl'>
+<p><div><h1>MANUPILATION DES DATES</h1></div></p>
+<br>Calcul a partir du temps UNIX écouler, année : 1970<br>
+<div>Temps : <strong> {{ temps }} </strong></div>
+<br>
+<div>Aujourd'hui est : <strong> {{ jour }} </strong></div>
+<br>
+<div>Le mois est : <strong> {{ mois }} </strong></div>
+<br>
+<div>L'année est : <strong> {{ annee }} </strong></div>
+<br>
+<div>L'heure est : <strong> {{ heure }} </strong></div>
+<br>
+<div>Minutes : <strong> {{ minute }} </strong></div>
+<br>
+<div>Secondes : <strong> {{ sec }} </strong></div>
+<br>
+<div>Millisecondes : <strong> {{ milli_sec }} </strong></div>
+<br>
+<div>Date sous forme de chaine de caractères : <strong>{{ chaine_conversion }} </strong></div>
+<br>Le calcul commence a partir 1970 : date UNIX  <br>
+<div>Date sous forme de nombre : <strong> {{ nb_conversion }} </strong></div>
+</div>
+</div>
+
+
+
+
+
+    <script src="../libs/angular-js/angular.js"></script>
+    <script src="../Controlleurs/dateController.js"></script>
+
+</body>
+</html>

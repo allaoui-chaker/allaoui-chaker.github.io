@@ -1,0 +1,117 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Dialog - confirmation</title>
+<script src="../libs/angular-js/angular.js"></script>
+	<script type="text/javascript" src="../libs/jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/development-bundle/themes/boostrap/jquery-ui.css"  id="jquery-ui-css" />
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.mouse.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.draggable.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.position.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.dialog.js"></script>
+
+
+</head>
+<body>
+<div>
+<a href="#" id="dialog-link">ouvrir</a>
+</div>
+<div id="deconnexion"></div>
+
+<div id="dialog-confirm" title="Connexion"><img src="./img/infos.png" />
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+	<div id="loginconnexion">Nom d'utilisateur : <input type="text" id="username" required /></div>
+	<div id="mdpconnexion">Mot de passe : <input type="password" id="password" required /></div></p>
+</div>
+<div id="actionok"></div>
+<div id="reponsephp"></div>
+<div id="statutphp"></div>
+<script>
+$(function() {
+
+
+$("#username").change( function(event) {
+$("#password").change( function(event) {
+var l=$("#username").val();
+var p=$("#password").val();
+$.ajax({
+            type: 'GET',
+            url: 'connexion.php',
+            data: 'login='+l+'&mdp='+p,
+            timeout: 3000,
+            dataType:'html',
+            success: function(data_retour,statut) {
+
+
+/*
+            $("#menucompte").css( { 
+            	width:"200px",
+background:"#998767",
+ color: "yellow",
+ position:"absolute",
+ top:200,
+ right:100 
+
+            } );
+
+*/
+
+
+           // $("#dialog-link").text("déconnexion").css("color","red");
+            $("#dialog-link").css( { display : "none" } );
+            //$("#deconnexion").text("DECONNECTER").css("color","red");
+            $("#reponsephp").html(data_retour).css("color","green");
+        	$("#statutphp").html(statut);
+            },
+            error: function() {
+              alert('La requête n a pas abouti'); }
+          });
+});// fin mpd.change()
+});// fin username.change()
+
+
+$( "#dialog-link" ).click(function( event ) {
+$( "#dialog-confirm" ).dialog( "open" );
+event.preventDefault();
+});
+
+$("#username").css( { position:"absolute" , top: 0 , left: 130, width:150 , height: 20 }	);
+$("#password").css( { position:"absolute" , top: 0 , left: 130, width:150 , height: 20 }	);
+$("#loginconnexion").css( { position:"absolute" , top: 50 , left: 10, color: "red" , "font-family":"arial" , "font-weight": "bold" }	);
+$("#mdpconnexion").css( { position:"absolute" , top: 100 , left: 10, color: "red" , "font-family":"arial" , "font-weight": "bold" }	);
+
+$( "#dialog-confirm" ).dialog({
+			autoOpen: false,
+			show : "slide",
+			hide : "puff",
+			resizable: false,
+			width:350,
+			height:300,
+			modal: true,
+			buttons: {
+				"Connecter": function() {
+
+					var form_login=$("#username").val();
+					var form_mdp=$("#password").val();
+					$("#actionok").html("<strong>vous avez confirmer votre choix : login :"+form_login+" mdp : "+ form_mdp +" </strong");
+					$( this ).dialog( "close" );
+				},
+				"Annuler": function() {
+
+					$( this ).dialog( "close" );
+					$("#actionok").html("<strong>vous n'avez pas confirmer votre choix</strong");
+
+				}
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

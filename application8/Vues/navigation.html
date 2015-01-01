@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../libs/angular-js/angular.js"></script>
+	<script type="text/javascript" src="../libs/jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/formulaire.css" />
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/development-bundle/themes/boostrap/jquery-ui.css"  id="jquery-ui-css" />
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.mouse.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.draggable.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.position.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.dialog.js"></script>
+</head>
+
+<body>
+<!-- NAVIGATION APPLICATION -->
+<div ng-app='ApplicationNavigation'>
+<!-- NAVIGATION CONTROLLER -->
+<div ng-controller='NavigationCtrl'>
+
+<div class="row">
+<div class ="col-sm-12">
+		<button class="btn btn-info pull-right" id="bt-user" style=" margin-right: 3px; margin-top: 3px;width:120px;">
+	{{ navigation.nav1 }}
+	</button>
+		<button class="btn btn-success pull-right" id="bt-danger" style=" margin-right: 3px; margin-top: 3px;width:120px;">
+	{{ navigation.nav2 }}
+</button>
+
+<a href="formulaire.html">
+<button class="btn btn-danger pull-right" id="bt-promo" style=" margin-right: 3px; margin-top: 3px;width:120px;">
+	{{ navigation.nav3 }}
+</button>
+</a>
+
+<button class="btn btn-warning pull-right" id="bt-deals" style=" margin-right: 3px; margin-top: 3px; width:120px;">
+	{{ navigation.nav4 }}
+</button>
+
+<ul class =" breadcrumb pull-left" style="margin-top: 1px;">
+<li><a href ="#">Accueil </a></li >
+<li><a href ="#">Enfant accueil</a></li >
+<li class =" active ">Petit enfant accueil <span class="badge" id="nb-vues">12 vues</span> </li >
+</ul>
+</div>
+
+</div>
+</div>
+
+    <script src="../Controlleurs/navigationController.js"></script>
+
+</body>
+</html>

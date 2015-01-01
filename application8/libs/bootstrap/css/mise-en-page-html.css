@@ -1,0 +1,94 @@
+#zone-header {
+	background: #FFFF00;
+	color: #FF0000;
+	padding-top: 20px;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-footer {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-nav {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-section {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-section-1 {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-section-2 {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;
+}
+#zone-aside {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;	
+}
+#zone-aside-1 {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;	
+}
+#zone-aside-2 {
+background: #FFFF00;
+	color: #FF0000;
+	border-radius: 10px;
+	border:2px dotted black;
+	max-width: 100%;	
+}
+#zone-article-1,
+#zone-article-2, 
+#zone-article-3, 
+#zone-article-4,
+#zone-article-5, 
+#zone-article-6,
+#zone-article-7 {
+background: #0000FF;
+	color: #FFFFFF;
+	border:2px dotted black;
+	max-width: 100%;	
+}
+#zone-article-8,
+#zone-article-9, 
+#zone-article-10, 
+#zone-article-11,
+#zone-article-12, 
+#zone-article-13 {
+background: #999999;
+	color: #FFFFFF;
+	border:2px dotted black;
+	max-width: 100%;	
+}
+#zone-article-14,
+#zone-article-15 {
+background: #444444;
+	color: #FFFFFF;
+	border:2px dotted black;
+	max-width: 100%;	
+}

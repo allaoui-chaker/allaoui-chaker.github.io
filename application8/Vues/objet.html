@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Application Objet</title>
+</head>
+<body>
+<!-- OBJET APPLICATION -->
+<div ng-app='ApplicationObjet'>
+<!-- OBJET CONTROLLER -->
+<div ng-controller='ObjetCtrl'>
+<p><div><h1>MANUPILATION DES Objets</h1></div></p>
+<br>Informations personnels<br>
+<div>Nom : <strong> {{ tableau.nom }} </strong></div><br>
+<div>Preom : <strong> {{ tableau.prenom }} </strong></div><br>
+<div>Age : <strong> {{ tableau.age }} </strong></div><br>
+<div>Ville : <strong> {{ tableau.ville }} </strong></div><br>
+<div>Zipcode : <strong> {{ tableau.zipcode }} </strong></div><br>
+<div>Pays : <strong> {{ tableau.pays }} </strong></div><br>
+<div>Metier : <strong> {{ tableau.metier }} </strong></div><br>
+<div>Expérience : <strong> {{ tableau.experience }} </strong></div><br>
+</div>
+</div>
+
+
+
+    <script src="../libs/angular-js/angular.js"></script>
+    <script src="../Controlleurs/objetController.js"></script>
+
+</body>
+</html>

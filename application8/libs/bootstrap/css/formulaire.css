@@ -1,0 +1,14 @@
+input[type="submit"] {
+width: auto;
+padding: 4px 15px;
+background: #555;
+color: #fff;
+cursor: pointer;
+}
+input[type="reset"] {
+width: auto;
+padding: 4px 15px;
+background: #555;
+color: #fff;
+cursor: pointer;
+}

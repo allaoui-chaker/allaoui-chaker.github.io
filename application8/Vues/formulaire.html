@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<title>FORMULAIRE DE CONTACT - BOOSTRAP</title>
+<script src="../libs/angular-js/angular.js"></script>
+	<script type="text/javascript" src="../libs/jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/formulaire.css" />
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/development-bundle/themes/boostrap/jquery-ui.css"  id="jquery-ui-css" />
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.mouse.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.draggable.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.position.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.dialog.js"></script>
+
+</head>
+<body>
+<form class=" well col-sm-8">
+	<legend>Formulaire de contact</legend>
+	<div class="form-group">
+	<label for="champnom">Nom :</label>
+	<input type="text" class="form-control" name="nom" id="champnom" placeholder="Entrer votre nom" required />
+	</div>
+
+	<div class="form-group">
+	<label for="champprenom">Prenom :</label>
+	<input type="text" class="form-control" name="prenom" id="champprenom" placeholder="Entrer votre prenom" required />
+	</div>
+
+	<div class="form-group">
+	<label for="champemail">Email :</label>
+	<input type="email" class="form-control" name="email" id="champemail" placeholder="Entrer votre email" required />
+	</div>
+
+	<div class="form-group">
+	<label for="champsujet">Sujet :</label>
+	<select class="form-control" id="champsujet">
+		<optgroup label="Catégorie : FrontEnd">
+			<option>JQuery</option>
+			<option>HTML 5</option>
+			<option>CSS3</option>
+		</optgroup>
+		<optgroup label="Catégorie : BackEnd">
+			<option>ZENDFRAMEWORK</option>
+			<option>SYMFONY</option>
+			<option>CAKEPHP</option>
+		</optgroup>
+	</select>
+	</div>
+
+	<div class="form-group" id="coloration">
+	<label for="champmessage">Message :</label>
+	<textarea class="form-control" name="message" id="champmessage"  required ></textarea><div id="oktest"></div>
+	</div>
+	<input type="submit" value="Envoyer" class="pull-right btn" />
+	<input type="reset" value="Annuler"  class="pull-left btn " />
+
+</form>	
+
+
+<form class ="form-inline pull-right ">
+<input type =" text " style ="width : 200px" class ="input-sm form-control " placeholder =" Recherche par mot clé ">
+ <button type =" submit " class ="btn btn-primary btn-sm">
+<span class ="glyphicon glyphicon-search "></span> 
+Chercher </button >
+</form >
+
+
+
+<script type="text/javascript">
+		$(document).ready(function(){
+$("#champmessage").click( function()  {
+$("#coloration").addClass("has-success has-feedback");
+$("#oktest").html("<span class ='glyphicon glyphicon-ok form-control-feedback'></span>");
+}  );
+
+});
+</script>
+</body>
+</html>

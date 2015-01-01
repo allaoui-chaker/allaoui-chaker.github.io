@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../libs/angular-js/angular.js"></script>
+	<script type="text/javascript" src="../libs/jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery-ui.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/formulaire.css" />
+<link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/development-bundle/themes/boostrap/jquery-ui.css"  id="jquery-ui-css" />
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.mouse.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.draggable.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.position.js"></script>
+	<script src="../libs/jquery-ui/development-bundle/ui/jquery.ui.dialog.js"></script>
+<style>
+#img-slide-1 {
+	border-radius: 5px;
+	width: 100%;
+	height: 300px;
+}
+#img-slide-2 {
+	border-radius: 5px;
+	width: 100%;
+	height: 300px;
+}
+#img-slide-3 {
+	border-radius: 5px;
+	width: 100%;
+	height: 300px;
+}
+
+</style>
+</head>
+<body>
+<!-- CARROUSSEL APPLICATION -->
+<div ng-app='ApplicationCarroussel'>
+<!-- CARROUSSEL CONTROLLER -->
+<div ng-controller='CarrousselCtrl'>
+
+<div class="row">
+<div class ="col-sm-12">
+
+<div id="carousel" class ="carousel slide">
+<ol class ="carousel-indicators">
+<li data-target ="#carousel" data-slide-to="0" class ="active"></li>
+<li data-target ="#carousel" data-slide-to="1"></li>
+<li data-target ="#carousel" data-slide-to="2"></li>
+</ol>
+
+<div class ="carousel-inner ">
+
+<div class ="item active"> <img alt="slide 1" src="{{ carroussel.img1}}" id="img-slide-1">
+<div class="carousel-caption"><h1>{{ carroussel.titre1}}</h1><br><h4>{{ carroussel.texte1}}</h4> </div>
+</div>
+
+<div class ="item"> <img alt="slide 2" src="{{ carroussel.img2}}" id="img-slide-2">
+<div class="carousel-caption"><h1>{{ carroussel.titre2}}</h1><br><h4>{{ carroussel.texte2}}</h4> </div>
+</div>
+
+<div class ="item"> <img alt="slide 3" src="{{ carroussel.img3}}" id="img-slide-3">
+<div class="carousel-caption"><h1>{{ carroussel.titre3}}</h1><br><h4>{{ carroussel.texte3}}</h4> </div>
+</div>
+
+</div >
+
+
+
+<a class ="left carousel-control " href ="#carousel" data-slide="prev">
+<span class ="icon-prev"></span>
+</a>
+<a class =" right carousel-control " href ="#carousel" data-slide="next">
+<span class ="icon-next "></span>
+</a>
+
+
+
+</div>
+</div>
+</div >
+</div >
+	
+</div>
+    <script src="../Controlleurs/carrousselController.js"></script>
+
+</body>
+</html>
