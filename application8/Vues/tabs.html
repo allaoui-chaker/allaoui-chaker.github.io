@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQueryUI TABS 2</title>
+<script src="../libs/angular-js/angular.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui/js/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/development-bundle/themes/boostrap/jquery-ui.css"  id="jquery-ui-css" />
+
+</head>
+<body>
+<iframe src="./menu.html" frameborder="0" scrolling="no" width="100%" height="50"></iframe>
+<iframe src="./carroussel.html" frameborder="0" scrolling="no" width="100%" height="300"></iframe>
+
+<iframe src="./navigation.html" frameborder="0" scrolling="no" width="100%" height="50"></iframe>
+
+
+<!-- TABS APPLICATION -->
+<div ng-app='ApplicationTabs'>
+<!-- TABS CONTROLLER -->
+
+<div ng-controller='TabsCtrl'>
+
+
+<div id="element-css"></div>
+<div id="tabs">
+<ul>
+<li><a href="#tab1">{{ frame.frame1 }}</a></li>
+<li><a href="#tab2">{{ frame.frame2 }}</a></li>
+<li><a href="#tab3">{{ frame.frame3 }}</a></li>
+<li><a href="#tab4">{{ frame.frame4 }}</a></li>
+<li><a href="#tab5">{{ frame.frame5 }}</a></li>
+<li><a href="#tab6">{{ frame.frame6 }}</a></li>
+</ul>
+
+<div id="tab1">
+<iframe src="./date.html" frameborder="0" scrolling="no" width="500" height="500"></iframe>
+</div>
+
+<div id="tab2">
+<iframe src="./objet.html" frameborder="0" scrolling="no" width="500" height="500"></iframe>
+</div>
+
+<div id="tab3">
+<iframe src="./event.html" frameborder="0" scrolling="no" width="500" height="500"></iframe></div>
+
+<div id="tab4">
+<iframe src="./exp-dialog-confirmation.html" frameborder="0" scrolling="no" width="100%" height="500"></iframe>
+</div>
+
+<div id="tab5">
+<iframe src="./formulaire.html" frameborder="0" scrolling="no" width="100%" height="500"></iframe>
+</div>
+
+<div id="tab6">
+<iframe src="./sitemap.html" frameborder="0" scrolling="no" width="100%" height="500"></iframe>
+</div>
+
+</div>
+</div>
+
+    <script src="../Controlleurs/tabsController.js"></script>
+
+</body>
+</html>

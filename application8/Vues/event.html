@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Application Event</title>
+</head>
+<body>
+<!-- EVENT APPLICATION -->
+<div ng-app='ApplicationEvent'>
+<!-- EVENT CONTROLLER -->
+
+<div ng-controller='EventCtrl'>
+<p><div><h1>EVENNEMENTS</h1></div></p>
+<div>
+<button ng-click="affichage()">Afficher la liste</button>
+<ul>
+<li ng-repeat="fruit in mesFruits">{{fruit}}</li>
+</ul>
+</div>
+
+</div>
+</div>
+    <script src="../libs/angular-js/angular.js"></script>
+    <script src="../Controlleurs/eventController.js"></script>
+
+</body>
+</html>
